@@ -19,7 +19,7 @@ export const spawnProcess = (
   args: ICLIArgs,
   flagMapping: string[],
   binaryName: string
-): Promise<any> => {
+): Promise<void> => {
   const toolPath = join(getBinaryDirectory(), binaryName);
   const toolFlags = args.flags ? splitFlagAndValue(createFlagsForTool(args.flags)) : [];
   const combinedFlags = [...flagMapping, ...toolFlags];
