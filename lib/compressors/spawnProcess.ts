@@ -33,6 +33,7 @@ export const spawnProcess = (
       const child = spawn(toolPath, combinedFlags, {
         env: {
           PATH: getBinaryDirectory() || process.env.PATH,
+          LD_PRELOAD_PATH: process.env.LD_PRELOAD_PATH,
         },
       });
 
