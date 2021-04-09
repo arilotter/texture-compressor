@@ -31,9 +31,8 @@ export const spawnProcess = (
       }
 
       const child = spawn(toolPath, combinedFlags, {
-        // @ts-ignore
         env: {
-          PATH: getBinaryDirectory() || process.env,
+          PATH: getBinaryDirectory() || process.env.PATH,
         },
       });
 
